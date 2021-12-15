@@ -1,6 +1,6 @@
 {
   "name": "koa-components",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -14,5 +14,9 @@
     "eslint-plugin-import": "^2.12.0",
     "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-react": "^7.9.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:Mafurion/koa-components.git"
   }
 }
