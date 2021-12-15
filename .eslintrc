@@ -1,0 +1,24 @@
+{
+  "extends": "airbnb",
+  "env": {
+    "node": true,
+    "jest": true
+  },
+  "rules": {
+    "func-names": 0,
+    "no-param-reassign": 0,
+    "linebreak-style": "off",
+    "function-paren-newline": 0,
+    "max-len": [1, 150],
+    "import/no-extraneous-dependencies": 0,
+    "no-await-in-loop": 0,
+    "class-methods-use-this": 0,
+    "object-curly-newline": 0,
+    "no-restricted-syntax": ["error", "LabeledStatement", "WithStatement"]
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
+  }
+}
