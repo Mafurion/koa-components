@@ -1,19 +1,21 @@
 const CODES = {
-  SERVICE_ERROR: 10000,
-  BAD_ARGUMENT: 11000,
-  NOT_FOUND: 12000,
-  LOGIC_ERROR: 13000,
-  AUTH_ERROR: 14000,
-  FORBIDDEN_ERROR: 15000,
+  ServiceError: 10000,
+  BadArgument: 11000,
+  NotFound: 12000,
+  LogicError: 13000,
+  Unauthorized: 14000,
+  Forbidden: 15000,
+  RequestError: 16000,
+  InternalError: 90000,
 };
 
 const STATUS_CODES = {
-  OK: 200,
-  NOT_FOUND: 404,
-  BAD_ARGUMENT: 400,
+  Ok: 200,
+  NotFound: 404,
+  BadArgument: 400,
   Unauthorized: 401,
-  FORBIDDEN: 403,
-  INTERNAL_ERROR: 500,
+  Forbidden: 403,
+  InternalError: 500,
 };
 
 module.exports = {
