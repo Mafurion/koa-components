@@ -6,6 +6,7 @@ const InternalError = require('./internal');
 const LogicError = require('./logic');
 const UnauthorizedError = require('./unauthorized');
 const RequestError = require('./request');
+const ServiceBaseError = require('./service_base');
 const CODES = require('./codes');
 
 
@@ -19,4 +20,5 @@ module.exports = {
   LogicError,
   UnauthorizedError,
   RequestError,
+  ServiceBaseError
 };
