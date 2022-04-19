@@ -33,7 +33,7 @@ class Utils {
     return Utils.parallel(iterable.map(v => async () => func(v)), { concurrency, qps });
   }
 
-  static async randomString(length) {
+  static randomString(length) {
     const chars = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let result = '';
     for (let i = length; i > 0; i -= 1) {
