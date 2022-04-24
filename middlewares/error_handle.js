@@ -7,6 +7,7 @@ async function errorHandler(ctx, next) {
   try {
     await next();
   } catch (err) {
+    console.log(err);
     if (err instanceof ApiBaseError) {
       ctx.body = {
         err_code: err.errorCode,

@@ -20,5 +20,5 @@ module.exports = {
   LogicError,
   UnauthorizedError,
   RequestError,
-  ServiceBaseError
+  ServiceBaseError,
 };
