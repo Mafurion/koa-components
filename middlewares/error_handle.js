@@ -17,8 +17,8 @@ async function errorHandler(ctx, next) {
     } else {
       ctx.status = 500;
       ctx.body = {
-        err_code: err instanceof ServiceBaseError ? err.errorCode : CODES.INTERNAL_ERROR,
-        err_msg: env === 'dev' ? err.stack : err.message,
+        err_code: err instanceof ServiceBaseError ? err.errorCode : CODES.InternalError,
+        err_msg: env === 'dev' ? err.stack : 'internal error',
       };
     }
 
