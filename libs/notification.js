@@ -1,4 +1,5 @@
 const logger = require('./logger');
+const lodash = require('lodash');
 const { NotificationType } = require('./constant');
 const config = require('../configs');
 const DingTalkService = require('../services/dingtalk');
@@ -25,7 +26,7 @@ class NotificationService {
         await dingtalk.sendMessage(this.dsn, {
           msgtype: 'text',
           text: {
-            content: error,
+            content: `发生了错误:\n${lodash.get(error, 'stack', error)}`,
           },
         });
       } else {

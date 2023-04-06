@@ -10,7 +10,7 @@ class DingDingService extends BaseService {
     return this.post({
       path: '/robot/send',
       qs: { access_token: token },
-      payload: message,
+      body: message,
     });
   }
 }
