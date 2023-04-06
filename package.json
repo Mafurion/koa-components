@@ -1,6 +1,6 @@
 {
   "name": "koa-components",
-  "version": "1.0.8",
+  "version": "1.0.9",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -10,6 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "bluebird": "^3.7.2",
+    "joi": "^17.9.1",
+    "js-yaml": "^4.1.0",
     "koa": "^2.5.2",
     "koa-bodyparser": "^4.2.1",
     "koa-morgan": "^1.0.1",

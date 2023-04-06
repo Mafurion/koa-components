@@ -1,5 +1,6 @@
-const { ApiBaseError, ServiceBaseError, CODES } = require('../errors');
+const { ApiBaseError, ServiceBaseError, CODES: { CODES: ErrorCodes } } = require('../errors');
 const logger = require('../libs/logger');
+const notification = require('../libs/notification');
 
 const env = process.env.NODE_ENV || 'dev';
 
@@ -7,7 +8,6 @@ async function errorHandler(ctx, next) {
   try {
     await next();
   } catch (err) {
-    console.log(err);
     if (err instanceof ApiBaseError) {
       ctx.body = {
         err_code: err.errorCode,
@@ -17,9 +17,10 @@ async function errorHandler(ctx, next) {
     } else {
       ctx.status = 500;
       ctx.body = {
-        err_code: err instanceof ServiceBaseError ? err.errorCode : CODES.InternalError,
+        err_code: err instanceof ServiceBaseError ? err.errorCode : ErrorCodes.InternalError,
         err_msg: env === 'dev' ? err.stack : 'internal error',
       };
+      await notification.captureException(err);
     }
 
     logger.error(err);

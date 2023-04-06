@@ -41,7 +41,7 @@ class BaseService {
       if (this.constructor.getServiceError) {
         throw this.constructor.getServiceError(e);
       } else {
-        throw new RequestError(`service request error: url: ${options.uri} method: ${options.method} message: ${e.message}`);;
+        throw new RequestError(`service request error: url: ${options.uri} method: ${options.method} message: ${e.message}`);
       }
     }
   }

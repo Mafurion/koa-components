@@ -1,7 +1,9 @@
+const lodash = require('lodash');
+
 async function output(ctx, next) {
   await next();
 
-  if (ctx.state.data) {
+  if (!lodash.isUndefined(ctx.state.data)) {
     ctx.body = {
       err_code: 0,
       err_msg: '',
