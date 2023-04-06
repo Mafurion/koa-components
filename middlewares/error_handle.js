@@ -15,6 +15,7 @@ async function errorHandler(ctx, next) {
       };
       ctx.status = err.statusCode;
     } else {
+      console.log(err);
       ctx.status = 500;
       ctx.body = {
         err_code: err instanceof ServiceBaseError ? err.errorCode : ErrorCodes.InternalError,
