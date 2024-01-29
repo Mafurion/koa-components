@@ -1,6 +1,6 @@
 {
   "name": "koa-components",
-  "version": "1.0.11",
+  "version": "1.0.12",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -18,7 +18,8 @@
     "koa-router": "^7.4.0",
     "lodash": "^4.17.15",
     "request-promise": "^4.2.6",
-    "winston": "^3.2.1"
+    "winston": "^3.2.1",
+    "xlsx": "^0.14.2"
   },
   "devDependencies": {
     "eslint": "^4.19.1",
